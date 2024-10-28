@@ -1,6 +1,5 @@
 import { create } from "zustand";
-import axios from "axios";
-
+import { fetchReportsFromApi } from "../api/report-api";
 import { Report } from "../types/report";
 
 interface ReportState {
@@ -11,8 +10,6 @@ interface ReportState {
   setRowsPerPage: (rows: number) => void;
 }
 
-const BASE_URL = "http://localhost:8000/reports";
-
 const useReportStore = create<ReportState>((set) => ({
   reports: [],
   loading: false,
@@ -21,9 +18,7 @@ const useReportStore = create<ReportState>((set) => ({
   fetchReports: async (date: string) => {
     set({ loading: true });
     try {
-      const response = await axios.get<Report[]>(BASE_URL, {
-        params: { date },
-      });
+      const response = await fetchReportsFromApi(date);
       set({ reports: response.data, loading: false });
     } catch (error) {
       console.error("Failed to fetch reports:", error);
