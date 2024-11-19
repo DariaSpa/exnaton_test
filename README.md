@@ -1,37 +1,27 @@
-# Vite & NextUI Template
+## Overview
 
-## How to Use
+A **React** and **TypeScript** application with **Next UI** for styling, **Recharts** for visualizing energy data, **Zustand** for state management, and **Node.js** for a mock API. It visualizes energy data grouped by daily, weekly, and monthly intervals while computing KPIs.
 
-To clone the project, run the following command:
+## Installation
 
-```bash
-git clone https://github.com/nextui-org/vite-template.git
-```
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-name>
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the middleware and app:
+   ```bash
+   npm run dev
+   ```
+4. Open your browser at `http://localhost:3000`.
 
-### Install dependencies
+## Technologies
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/vite-template/blob/main/LICENSE).
+- **React**, **TypeScript**, **Next UI**
+- **Recharts**: Data visualization
+- **Zustand**: State management
+- **Node.js**: Mock API
